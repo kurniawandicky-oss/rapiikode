@@ -23,6 +23,14 @@
       --tosca-light: #14b8a6;
       --tosca-soft: #e6f7f6;
 
+      /* Palet Biru Muda untuk Ikon Tambah, Entry, dan Pilihan */
+      --sky-light: #7dd3fc;
+      --sky: #38bdf8;
+      --sky-dark: #0284c7;
+      --sky-soft: #e0f2fe;
+      --sky-pale: #f0f9ff;
+      --grad-sky: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 48%, #0ea5e9 100%);
+
       --grad-main: linear-gradient(135deg, #ff7a18 0%, #10b981 52%, #0d9488 100%);
       --grad-btn: linear-gradient(135deg, #ff7a18 0%, #16a34a 55%, #0d9488 100%);
       --grad-unlock: linear-gradient(135deg, #0d9488 0%, #10b981 55%, #ff7a18 100%);
@@ -33,10 +41,10 @@
       --text-main: #0f172a;
       --text-muted: #475569;
       --text-light: #64748b;
-      --border: rgba(13, 148, 136, 0.16);
+      --border: rgba(56, 189, 248, 0.28);
       --danger: #ef4444;
       --danger-soft: #fef2f2;
-      --shadow-lg: 0 20px 50px -12px rgba(13, 148, 136, 0.16), 0 8px 24px -8px rgba(255, 122, 24, 0.10);
+      --shadow-lg: 0 20px 50px -12px rgba(13, 148, 136, 0.16), 0 8px 24px -8px rgba(56, 189, 248, 0.14);
       --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.05);
       --radius-xl: 24px;
       --radius-lg: 16px;
@@ -71,7 +79,7 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(80px);
-      opacity: 0.45;
+      opacity: 0.42;
       animation: floatBlob 16s ease-in-out infinite alternate;
     }
     .blob-orange {
@@ -201,10 +209,10 @@
       border: 1px solid rgba(15, 23, 42, 0.07);
     }
     .trust-badge svg {
-      color: var(--tosca);
+      color: var(--sky-dark);
     }
 
-    /* Tab Navigation */
+    /* Tab Pilihan Fitur (Biru Muda) */
     .tabs-wrapper {
       display: flex;
       justify-content: center;
@@ -213,11 +221,11 @@
     .tabs {
       display: inline-grid;
       grid-template-columns: 1fr 1fr;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(12px);
       padding: 6px;
       border-radius: 18px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(56, 189, 248, 0.35);
       box-shadow: var(--shadow-sm);
       gap: 6px;
       width: 100%;
@@ -240,13 +248,13 @@
       transition: all 0.25s ease;
     }
     .tab-btn:hover {
-      color: var(--text-main);
-      background: rgba(13, 148, 136, 0.06);
+      color: var(--sky-dark);
+      background: var(--sky-pale);
     }
     .tab-btn.active {
-      background: var(--grad-main);
+      background: var(--grad-sky);
       color: #fff;
-      box-shadow: 0 8px 20px rgba(13, 148, 136, 0.28);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.36);
     }
 
     /* Main Card */
@@ -290,64 +298,75 @@
       margin-top: 2px;
     }
 
-    /* Dropzone */
+    /* Dropzone / Area Entry & Ikon Tambah (Biru Muda) */
     .dropzone {
       position: relative;
-      border: 2px dashed rgba(13, 148, 136, 0.38);
+      border: 2px dashed rgba(56, 189, 248, 0.65);
       border-radius: var(--radius-lg);
       padding: 34px 20px;
       text-align: center;
-      background: linear-gradient(145deg, rgba(255, 122, 24, 0.04), rgba(16, 185, 129, 0.05), rgba(13, 148, 136, 0.06));
+      background: linear-gradient(145deg, rgba(224, 242, 254, 0.65), rgba(240, 249, 255, 0.85), rgba(186, 230, 253, 0.35));
       cursor: pointer;
       transition: all 0.25s ease;
     }
     .dropzone:hover, .dropzone.dragover {
-      border-color: var(--orange);
-      background: linear-gradient(145deg, rgba(255, 122, 24, 0.09), rgba(16, 185, 129, 0.09), rgba(13, 148, 136, 0.1));
+      border-color: var(--sky-dark);
+      background: linear-gradient(145deg, rgba(186, 230, 253, 0.55), rgba(224, 242, 254, 0.9), rgba(125, 211, 252, 0.35));
       transform: translateY(-2px);
-      box-shadow: 0 12px 26px rgba(13, 148, 136, 0.12);
+      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.22);
     }
     .dropzone input[type="file"] {
       display: none;
     }
     .drop-icon {
-      width: 60px;
-      height: 60px;
+      width: 62px;
+      height: 62px;
       margin: 0 auto 12px;
       border-radius: 18px;
-      background: var(--grad-main);
+      background: var(--grad-sky);
       color: #fff;
       display: grid;
       place-items: center;
-      box-shadow: 0 10px 22px rgba(255, 122, 24, 0.22);
+      box-shadow: 0 10px 24px rgba(56, 189, 248, 0.38);
     }
     .dropzone h3 {
       font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 4px;
+      color: #0c4a6e;
     }
     .dropzone p {
       font-size: 0.86rem;
-      color: var(--text-light);
+      color: var(--text-muted);
       margin-bottom: 14px;
     }
     .btn-outline {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 12px;
-      border: 1.5px solid var(--tosca);
-      background: #fff;
-      color: var(--tosca);
+      border: 1.5px solid var(--sky);
+      background: var(--sky-pale);
+      color: var(--sky-dark);
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 700;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.16);
       transition: all 0.2s ease;
     }
+    .btn-outline svg {
+      color: #0ea5e9;
+      transition: color 0.2s ease;
+    }
     .btn-outline:hover {
-      background: var(--tosca);
+      background: var(--grad-sky);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(56, 189, 248, 0.34);
+    }
+    .btn-outline:hover svg {
       color: #fff;
     }
 
@@ -365,8 +384,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--tosca-soft);
-      color: var(--tosca);
+      background: var(--sky-soft);
+      color: var(--sky-dark);
+      border: 1px solid rgba(56, 189, 248, 0.35);
       padding: 6px 13px;
       border-radius: 999px;
       font-size: 0.82rem;
@@ -378,26 +398,31 @@
       gap: 6px;
     }
     .chip-btn {
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      background: #fff;
-      color: var(--text-muted);
-      padding: 6px 11px;
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      background: var(--sky-pale);
+      color: var(--sky-dark);
+      padding: 6px 12px;
       border-radius: 10px;
       font-family: inherit;
       font-size: 0.78rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.18s ease;
     }
     .chip-btn:hover {
-      border-color: var(--tosca);
-      color: var(--tosca);
-      background: var(--tosca-soft);
+      border-color: var(--sky-dark);
+      color: #fff;
+      background: var(--grad-sky);
+    }
+    .chip-btn.danger {
+      background: #fff;
+      border-color: rgba(239, 68, 68, 0.3);
+      color: var(--danger);
     }
     .chip-btn.danger:hover {
       border-color: var(--danger);
-      color: var(--danger);
-      background: var(--danger-soft);
+      color: #fff;
+      background: var(--danger);
     }
 
     .file-list {
@@ -409,7 +434,7 @@
       padding-right: 4px;
     }
     .file-list::-webkit-scrollbar { width: 6px; }
-    .file-list::-webkit-scrollbar-thumb { background: rgba(13, 148, 136, 0.28); border-radius: 999px; }
+    .file-list::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.45); border-radius: 999px; }
 
     .file-item {
       display: flex;
@@ -417,29 +442,29 @@
       gap: 12px;
       padding: 12px 14px;
       background: #fff;
-      border: 1.5px solid rgba(15, 23, 42, 0.08);
+      border: 1.5px solid rgba(56, 189, 248, 0.22);
       border-radius: var(--radius-md);
       box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
       transition: all 0.2s ease;
     }
     .file-item:hover {
-      border-color: rgba(16, 185, 129, 0.45);
-      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.09);
+      border-color: var(--sky);
+      box-shadow: 0 6px 16px rgba(56, 189, 248, 0.14);
     }
     .file-item.dragging {
       opacity: 0.45;
       border-style: dashed;
-      border-color: var(--orange);
+      border-color: var(--sky-dark);
     }
     .file-item.drag-target {
-      border-color: var(--orange);
-      background: var(--orange-soft);
+      border-color: var(--sky-dark);
+      background: var(--sky-pale);
       transform: scale(1.01);
     }
 
     .drag-handle {
       cursor: grab;
-      color: var(--text-light);
+      color: var(--sky-dark);
       display: flex;
       align-items: center;
       padding: 4px;
@@ -448,16 +473,17 @@
     .drag-handle:active { cursor: grabbing; }
 
     .order-badge {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 10px;
-      background: var(--grad-main);
+      background: var(--grad-sky);
       color: #fff;
       font-size: 0.78rem;
       font-weight: 800;
       display: grid;
       place-items: center;
       flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(56, 189, 248, 0.28);
     }
 
     .file-meta {
@@ -493,8 +519,8 @@
       font-size: 0.72rem;
     }
     .tag-pages {
-      background: var(--green-soft);
-      color: #047857;
+      background: var(--sky-soft);
+      color: var(--sky-dark);
       padding: 2px 8px;
       border-radius: 999px;
       font-weight: 700;
@@ -512,14 +538,16 @@
       width: 100%;
       padding: 6px 10px;
       border-radius: 8px;
-      border: 1px solid rgba(255, 122, 24, 0.45);
+      border: 1.5px solid rgba(56, 189, 248, 0.5);
+      background: var(--sky-pale);
       font-family: inherit;
       font-size: 0.8rem;
       outline: none;
     }
     .inline-pw-box input:focus {
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(255, 122, 24, 0.14);
+      border-color: var(--sky-dark);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
     }
 
     .file-controls {
@@ -532,18 +560,18 @@
       width: 32px;
       height: 32px;
       border-radius: 9px;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      background: #f8fafc;
-      color: var(--text-muted);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: var(--sky-pale);
+      color: var(--sky-dark);
       display: grid;
       place-items: center;
       cursor: pointer;
       transition: all 0.18s ease;
     }
     .icon-btn:hover:not(:disabled) {
-      background: var(--tosca-soft);
-      border-color: var(--tosca);
-      color: var(--tosca);
+      background: var(--grad-sky);
+      border-color: transparent;
+      color: #fff;
     }
     .icon-btn:disabled {
       opacity: 0.35;
@@ -568,17 +596,20 @@
       align-items: center;
       gap: 6px;
     }
+    .reorder-hint svg {
+      color: var(--sky-dark);
+    }
 
-    /* Security / Password Settings Panel */
+    /* Security / Password Settings & Entry Panel */
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.22), transparent);
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.35), transparent);
       margin: 24px 0;
     }
 
     .security-box {
-      background: linear-gradient(135deg, rgba(255, 122, 24, 0.04), rgba(16, 185, 129, 0.05), rgba(13, 148, 136, 0.05));
-      border: 1px solid rgba(13, 148, 136, 0.16);
+      background: linear-gradient(135deg, rgba(224, 242, 254, 0.45), rgba(240, 249, 255, 0.75), rgba(230, 247, 246, 0.45));
+      border: 1px solid rgba(56, 189, 248, 0.32);
       border-radius: var(--radius-lg);
       padding: 20px;
     }
@@ -598,6 +629,7 @@
       color: var(--text-muted);
     }
 
+    /* Toggle Pilihan (Biru Muda) */
     .toggle {
       position: relative;
       width: 52px;
@@ -630,7 +662,8 @@
       transition: 0.25s;
     }
     .toggle input:checked + .toggle-slider {
-      background: var(--grad-main);
+      background: var(--grad-sky);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
     }
     .toggle input:checked + .toggle-slider::before {
       transform: translateX(24px);
@@ -666,7 +699,7 @@
       width: 100%;
       padding: 12px 44px 12px 14px;
       border-radius: 12px;
-      border: 1.5px solid rgba(15, 23, 42, 0.14);
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
       background: #fff;
       font-family: inherit;
       font-size: 0.92rem;
@@ -675,8 +708,8 @@
       transition: all 0.2s ease;
     }
     .input-control:focus {
-      border-color: var(--tosca);
-      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.14);
+      border-color: var(--sky-dark);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
     }
     .input-control.plain {
       padding-right: 14px;
@@ -690,15 +723,15 @@
       border-radius: 9px;
       border: none;
       background: transparent;
-      color: var(--text-light);
+      color: var(--sky-dark);
       display: grid;
       place-items: center;
       cursor: pointer;
       transition: all 0.18s ease;
     }
     .eye-btn:hover {
-      background: var(--tosca-soft);
-      color: var(--tosca);
+      background: var(--sky-soft);
+      color: #0369a1;
     }
 
     .pw-feedback-row {
@@ -785,14 +818,14 @@
       margin-top: 16px;
       padding: 14px;
       border-radius: 12px;
-      background: #f8fafc;
+      background: var(--sky-pale);
       border: 1px solid var(--border);
     }
     .progress-box.show { display: block; }
     .progress-text {
       font-size: 0.84rem;
       font-weight: 700;
-      color: var(--tosca);
+      color: var(--sky-dark);
       margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
@@ -806,7 +839,7 @@
     .progress-bar {
       height: 100%;
       width: 0%;
-      background: var(--grad-main);
+      background: var(--grad-sky);
       transition: width 0.25s ease;
     }
 
@@ -834,15 +867,15 @@
       color: #991b1b;
     }
     .alert-info {
-      background: var(--tosca-soft);
-      border: 1px solid rgba(13, 148, 136, 0.3);
-      color: #115e59;
+      background: var(--sky-soft);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #075985;
     }
 
     .btn-download-again {
       padding: 8px 14px;
       border-radius: 10px;
-      background: var(--tosca);
+      background: var(--grad-sky);
       color: #fff;
       text-decoration: none;
       font-size: 0.82rem;
@@ -852,7 +885,7 @@
       gap: 6px;
     }
     .btn-download-again:hover {
-      background: #0f766e;
+      opacity: 0.92;
     }
 
     /* Single File Card (Unlock Tab) */
@@ -931,7 +964,7 @@
       </div>
 
       <p class="brand-subtitle">
-        Gabungkan file PDF sebanyak apa pun tanpa batasan, atur urutannya dengan mudah, beri proteksi password <strong>AES-256</strong>, atau hapus password dari PDF yang terkunci — semua berjalan langsung di browser Anda.
+        Gabungkan file <strong>.pdf</strong> / <strong>.PDF</strong> sebanyak apa pun tanpa batasan, atur urutannya dengan mudah, beri proteksi password <strong>AES-256</strong>, atau hapus password dari PDF yang terkunci — semua berjalan langsung di browser Anda.
       </p>
 
       <div class="trust-badges">
@@ -941,7 +974,7 @@
         </span>
         <span class="trust-badge">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-          Tanpa Batas Jumlah PDF
+          Support Format PDF &amp; pdf
         </span>
         <span class="trust-badge">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -950,7 +983,7 @@
       </div>
     </header>
 
-    <!-- Navigasi Tab Fitur -->
+    <!-- Navigasi Tab Pilihan Fitur (Biru Muda) -->
     <div class="tabs-wrapper">
       <div class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="merge" role="tab" aria-selected="true">
@@ -976,25 +1009,26 @@
         <div class="section-head">
           <div>
             <h2>Gabungkan Beberapa PDF &amp; Pasang Password</h2>
-            <p>Tambahkan file PDF tanpa batasan jumlah, urutkan posisinya, lalu kunci dengan password.</p>
+            <p>Tambahkan file berformat <strong>.pdf</strong> atau <strong>.PDF</strong> tanpa batasan jumlah, urutkan posisinya, lalu kunci dengan password.</p>
           </div>
         </div>
 
-        <!-- Area Upload / Dropzone -->
+        <!-- Area Upload / Entry & Ikon Tambah Biru Muda -->
         <div class="dropzone" id="mergeDropzone">
-          <input type="file" id="mergeFileInput" accept=".pdf,application/pdf" multiple />
+          <input type="file" id="mergeFileInput" accept=".pdf,.PDF,application/pdf,application/x-pdf" multiple />
           <div class="drop-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="17 8 12 3 7 8"/>
-              <line x1="12" y1="3" x2="12" y2="15"/>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
             </svg>
           </div>
-          <h3>Tarik &amp; Lepas File PDF di Sini</h3>
+          <h3>Tarik &amp; Lepas File PDF / pdf di Sini</h3>
           <p>Anda dapat memilih banyak file sekaligus atau menambahkannya satu per satu tanpa batas.</p>
           <button type="button" class="btn-outline" id="mergeBrowseBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Pilih File PDF
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Tambah / Pilih File PDF
           </button>
         </div>
 
@@ -1100,21 +1134,24 @@
         <div class="section-head">
           <div>
             <h2>Batalkan Password pada PDF Terkunci</h2>
-            <p>Unggah PDF yang dikunci, masukkan password saat ini, lalu unduh versi bebas password.</p>
+            <p>Unggah file <strong>.pdf</strong> atau <strong>.PDF</strong> yang dikunci, masukkan password saat ini, lalu unduh versi bebas password.</p>
           </div>
         </div>
 
         <div class="dropzone" id="unlockDropzone">
-          <input type="file" id="unlockFileInput" accept=".pdf,application/pdf" />
+          <input type="file" id="unlockFileInput" accept=".pdf,.PDF,application/pdf,application/x-pdf" />
           <div class="drop-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
               <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
             </svg>
           </div>
-          <h3>Pilih File PDF yang Terkunci</h3>
+          <h3>Pilih File PDF / pdf yang Terkunci</h3>
           <p>Tarik file PDF ke sini atau klik tombol di bawah untuk memilih file.</p>
-          <button type="button" class="btn-outline" id="unlockBrowseBtn">Pilih PDF Terkunci</button>
+          <button type="button" class="btn-outline" id="unlockBrowseBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Pilih PDF Terkunci
+          </button>
         </div>
 
         <!-- File terpilih + Cancel Button -->
@@ -1197,8 +1234,15 @@
     }
 
     // =========================================================================
-    // 2. UTILITAS UMUM & IKON MATA (LIHAT / TUTUP PASSWORD)
+    // 2. VALIDASI FORMAT FILE (.PDF dan .pdf) & UTILITAS UMUM
     // =========================================================================
+    function isPdfFile(file) {
+      if (!file) return false;
+      const name = (file.name || '').trim().toLowerCase();
+      const type = (file.type || '').trim().toLowerCase();
+      return name.endsWith('.pdf') || type === 'application/pdf' || type === 'application/x-pdf';
+    }
+
     const EYE_OPEN_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
     const EYE_CLOSED_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
 
@@ -1341,12 +1385,10 @@
         return;
       }
 
-      const incoming = Array.from(fileList).filter(
-        (f) => f.type === 'application/pdf' || f.name.toLowerCase().endsWith('.pdf')
-      );
+      const incoming = Array.from(fileList).filter(isPdfFile);
 
       if (!incoming.length) {
-        showAlert(mergeAlert, 'error', 'Harap pilih file berformat PDF (.pdf).');
+        showAlert(mergeAlert, 'error', 'Harap pilih file berformat PDF (.pdf atau .PDF).');
         return;
       }
 
@@ -1367,12 +1409,10 @@
             const doc = await PDFLib.PDFDocument.load(bytes);
             entry.pageCount = doc.getPageCount();
           } catch (err1) {
-            // Cek jika hanya terkunci pembatasan izin (password kosong)
             try {
               const docOwner = await PDFLib.PDFDocument.load(bytes, { password: '' });
               entry.pageCount = docOwner.getPageCount();
             } catch (err2) {
-              // File benar-benar membutuhkan password buka
               entry.locked = true;
             }
           }
@@ -1449,7 +1489,6 @@
           </div>
         `;
 
-        // Event tombol Naik / Turun / Cancel
         row.querySelector('.move-up').addEventListener('click', () => {
           if (index > 0) {
             [mergeFiles[index - 1], mergeFiles[index]] = [mergeFiles[index], mergeFiles[index - 1]];
@@ -1470,7 +1509,6 @@
           updateMergeActionState();
         });
 
-        // Input password inline jika salah satu PDF input terkunci
         const inlineInput = row.querySelector('.inline-file-pw');
         if (inlineInput) {
           inlineInput.addEventListener('mousedown', (e) => e.stopPropagation());
@@ -1479,7 +1517,6 @@
           });
         }
 
-        // Drag & Drop Reorder
         row.addEventListener('dragstart', (e) => {
           if (e.target.tagName === 'INPUT') { e.preventDefault(); return; }
           dragSrcIndex = index;
@@ -1518,7 +1555,6 @@
       });
     }
 
-    // Tombol sortir cepat
     document.getElementById('sortAZBtn').addEventListener('click', () => {
       mergeFiles.sort((a, b) => a.name.localeCompare(b.name, 'id', { numeric: true }));
       renderMergeList();
@@ -1538,7 +1574,6 @@
       updateMergeActionState();
     });
 
-    // Validasi & Kekuatan Password (2x Konfirmasi)
     function evaluatePasswordUI() {
       const usePw = enablePasswordToggle.checked;
       passwordFieldsWrap.classList.toggle('hidden', !usePw);
@@ -1546,7 +1581,6 @@
       const pw1 = mergePassword.value;
       const pw2 = mergePasswordConfirm.value;
 
-      // Kekuatan password
       let score = 0;
       if (pw1.length >= 4) score++;
       if (pw1.length >= 8) score++;
@@ -1554,7 +1588,7 @@
       if (/\d/.test(pw1) || /[^A-Za-z0-9]/.test(pw1)) score++;
 
       const widths = ['0%', '28%', '55%', '80%', '100%'];
-      const colors = ['#cbd5e1', '#ef4444', '#ff7a18', '#10b981', '#0d9488'];
+      const colors = ['#cbd5e1', '#ef4444', '#ff7a18', '#38bdf8', '#0284c7'];
       const labels = ['-', 'Lemah', 'Cukup', 'Bagus', 'Kuat'];
       const idx = pw1.length === 0 ? 0 : Math.max(1, score);
 
@@ -1563,7 +1597,6 @@
       strengthLabel.textContent = labels[idx];
       strengthLabel.style.color = idx === 0 ? '#64748b' : colors[idx];
 
-      // Kecocokan 2x password
       if (!pw1 && !pw2) {
         matchStatus.textContent = '';
         matchStatus.className = 'match-status';
@@ -1598,7 +1631,6 @@
     mergePasswordConfirm.addEventListener('input', evaluatePasswordUI);
     evaluatePasswordUI();
 
-    // Proses Penggabungan & Enkripsi PDF
     mergeProcessBtn.addEventListener('click', async () => {
       if (mergeFiles.length === 0) return;
 
@@ -1701,7 +1733,7 @@
     // 5. LOGIKA TAB 2: BATALKAN / HAPUS PASSWORD PADA PDF TERKUNCI
     // =========================================================================
     let unlockFileObj = null;
-    let unlockMode = 'unknown'; // 'open-locked' | 'owner-only' | 'not-encrypted'
+    let unlockMode = 'unknown';
     let lastUnlockUrl = null;
 
     const unlockDropzone = document.getElementById('unlockDropzone');
@@ -1751,8 +1783,8 @@
 
     async function handleUnlockFileSelect(file) {
       hideAlert(unlockAlert);
-      if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
-        showAlert(unlockAlert, 'error', 'Harap pilih file berformat PDF (.pdf).');
+      if (!isPdfFile(file)) {
+        showAlert(unlockAlert, 'error', 'Harap pilih file berformat PDF (.pdf atau .PDF).');
         return;
       }
 
@@ -1819,7 +1851,6 @@
           throw new Error('Password salah atau format enkripsi tidak didukung. Pastikan huruf besar/kecil password sudah tepat.');
         }
 
-        // Pastikan tidak ada kamus enkripsi tersisa saat disimpan ulang
         if (doc.context && doc.context.trailerInfo && doc.context.trailerInfo.Encrypt) {
           delete doc.context.trailerInfo.Encrypt;
         }
