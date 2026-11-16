@@ -37,7 +37,6 @@
 
       --bg-base: #f4fbf9;
       --surface: rgba(255, 255, 255, 0.92);
-      --surface-solid: #ffffff;
       --text-main: #0f172a;
       --text-muted: #475569;
       --text-light: #64748b;
@@ -51,11 +50,7 @@
       --radius-md: 12px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -67,14 +62,7 @@
       position: relative;
     }
 
-    /* Latar Belakang Mesh Gradasi Orange - Hijau - Tosca */
-    .bg-decor {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-    }
+    .bg-decor { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -82,48 +70,18 @@
       opacity: 0.42;
       animation: floatBlob 16s ease-in-out infinite alternate;
     }
-    .blob-orange {
-      width: 460px;
-      height: 460px;
-      background: radial-gradient(circle, #ff8c38, #ff7a18 60%, transparent 100%);
-      top: -120px;
-      left: -100px;
-    }
-    .blob-green {
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, #34d399, #10b981 60%, transparent 100%);
-      top: 25%;
-      right: -140px;
-      animation-delay: -5s;
-    }
-    .blob-tosca {
-      width: 520px;
-      height: 520px;
-      background: radial-gradient(circle, #2dd4bf, #0d9488 60%, transparent 100%);
-      bottom: -160px;
-      left: 22%;
-      animation-delay: -10s;
-    }
+    .blob-orange { width: 460px; height: 460px; background: radial-gradient(circle, #ff8c38, #ff7a18 60%, transparent 100%); top: -120px; left: -100px; }
+    .blob-green { width: 480px; height: 480px; background: radial-gradient(circle, #34d399, #10b981 60%, transparent 100%); top: 25%; right: -140px; animation-delay: -5s; }
+    .blob-tosca { width: 520px; height: 520px; background: radial-gradient(circle, #2dd4bf, #0d9488 60%, transparent 100%); bottom: -160px; left: 22%; animation-delay: -10s; }
 
     @keyframes floatBlob {
       0% { transform: translate(0, 0) scale(1); }
       100% { transform: translate(30px, -25px) scale(1.08); }
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-    }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 18px 60px; }
 
-    /* Header & Brand "KODE RAPI" */
-    .hero {
-      text-align: center;
-      margin-bottom: 28px;
-      padding: 10px 12px;
-    }
-
+    .hero { text-align: center; margin-bottom: 28px; padding: 10px 12px; }
     .brand-pill {
       display: inline-flex;
       align-items: center;
@@ -140,35 +98,14 @@
       color: var(--tosca);
       margin-bottom: 14px;
     }
-    .brand-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--grad-main);
-      box-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
-    }
+    .brand-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--grad-main); box-shadow: 0 0 10px rgba(16, 185, 129, 0.7); }
 
-    .brand-title-wrap {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
+    .brand-title-wrap { display: inline-flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
     .brand-logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      background: var(--grad-main);
-      display: grid;
-      place-items: center;
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(13, 148, 136, 0.28);
-      flex-shrink: 0;
+      width: 52px; height: 52px; border-radius: 16px; background: var(--grad-main);
+      display: grid; place-items: center; color: #fff;
+      box-shadow: 0 10px 24px rgba(13, 148, 136, 0.28); flex-shrink: 0;
     }
-
     .brand-title {
       font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(2.2rem, 5vw, 3.25rem);
@@ -179,126 +116,49 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 1.15;
-      text-shadow: 0 10px 30px rgba(13, 148, 136, 0.08);
     }
+    .brand-subtitle { max-width: 660px; margin: 0 auto; color: var(--text-muted); font-size: 0.98rem; }
 
-    .brand-subtitle {
-      max-width: 660px;
-      margin: 0 auto;
-      color: var(--text-muted);
-      font-size: 0.98rem;
-    }
-
-    .trust-badges {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
+    .trust-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
     .trust-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.78);
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.07);
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.8rem; font-weight: 600; color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.78); padding: 6px 12px;
+      border-radius: 999px; border: 1px solid rgba(15, 23, 42, 0.07);
     }
-    .trust-badge svg {
-      color: var(--sky-dark);
-    }
+    .trust-badge svg { color: var(--sky-dark); }
 
-    /* Tab Pilihan Fitur (Biru Muda) */
-    .tabs-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 22px;
-    }
+    /* Tab Pilihan (Biru Muda) */
+    .tabs-wrapper { display: flex; justify-content: center; margin-bottom: 22px; }
     .tabs {
-      display: inline-grid;
-      grid-template-columns: 1fr 1fr;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(12px);
-      padding: 6px;
-      border-radius: 18px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      box-shadow: var(--shadow-sm);
-      gap: 6px;
-      width: 100%;
-      max-width: 540px;
+      display: inline-grid; grid-template-columns: 1fr 1fr;
+      background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(12px);
+      padding: 6px; border-radius: 18px; border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: var(--shadow-sm); gap: 6px; width: 100%; max-width: 540px;
     }
     .tab-btn {
-      border: none;
-      background: transparent;
-      padding: 12px 16px;
-      border-radius: 13px;
-      font-family: inherit;
-      font-size: 0.93rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      border: none; background: transparent; padding: 12px 16px; border-radius: 13px;
+      font-family: inherit; font-size: 0.93rem; font-weight: 700; color: var(--text-muted);
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
       transition: all 0.25s ease;
     }
-    .tab-btn:hover {
-      color: var(--sky-dark);
-      background: var(--sky-pale);
-    }
-    .tab-btn.active {
-      background: var(--grad-sky);
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.36);
-    }
+    .tab-btn:hover { color: var(--sky-dark); background: var(--sky-pale); }
+    .tab-btn.active { background: var(--grad-sky); color: #fff; box-shadow: 0 8px 20px rgba(56, 189, 248, 0.36); }
 
-    /* Main Card */
     .card {
-      background: var(--surface);
-      backdrop-filter: blur(18px);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: var(--shadow-lg);
-      padding: 28px;
+      background: var(--surface); backdrop-filter: blur(18px);
+      border-radius: var(--radius-xl); border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow-lg); padding: 28px;
     }
+    .tab-panel { display: none; animation: fadeSlide 0.28s ease; }
+    .tab-panel.active { display: block; }
+    @keyframes fadeSlide { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-    .tab-panel {
-      display: none;
-      animation: fadeSlide 0.28s ease;
-    }
-    .tab-panel.active {
-      display: block;
-    }
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+    .section-head h2 { font-size: 1.25rem; font-weight: 800; color: var(--text-main); }
+    .section-head p { font-size: 0.88rem; color: var(--text-muted); margin-top: 2px; }
 
-    .section-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    .section-head h2 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--text-main);
-    }
-    .section-head p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* Dropzone / Area Entry & Ikon Tambah (Biru Muda) */
+    /* Dropzone / Ikon Tambah & Entry Biru Muda */
     .dropzone {
       position: relative;
       border: 2px dashed rgba(56, 189, 248, 0.65);
@@ -315,615 +175,188 @@
       transform: translateY(-2px);
       box-shadow: 0 12px 26px rgba(56, 189, 248, 0.22);
     }
-    .dropzone input[type="file"] {
-      display: none;
-    }
+    .dropzone input[type="file"] { display: none; }
     .drop-icon {
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 12px;
-      border-radius: 18px;
-      background: var(--grad-sky);
-      color: #fff;
-      display: grid;
-      place-items: center;
+      width: 62px; height: 62px; margin: 0 auto 12px; border-radius: 18px;
+      background: var(--grad-sky); color: #fff; display: grid; place-items: center;
       box-shadow: 0 10px 24px rgba(56, 189, 248, 0.38);
     }
-    .dropzone h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #0c4a6e;
-    }
-    .dropzone p {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
+    .dropzone h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; color: #0c4a6e; }
+    .dropzone p { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 14px; }
+
     .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 10px 20px;
-      border-radius: 12px;
-      border: 1.5px solid var(--sky);
-      background: var(--sky-pale);
-      color: var(--sky-dark);
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.16);
-      transition: all 0.2s ease;
+      display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px;
+      border-radius: 12px; border: 1.5px solid var(--sky); background: var(--sky-pale);
+      color: var(--sky-dark); font-family: inherit; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(56, 189, 248, 0.16); transition: all 0.2s ease;
     }
-    .btn-outline svg {
-      color: #0ea5e9;
-      transition: color 0.2s ease;
-    }
-    .btn-outline:hover {
-      background: var(--grad-sky);
-      border-color: transparent;
-      color: #fff;
-      box-shadow: 0 8px 18px rgba(56, 189, 248, 0.34);
-    }
-    .btn-outline:hover svg {
-      color: #fff;
-    }
+    .btn-outline svg { color: #0ea5e9; transition: color 0.2s ease; }
+    .btn-outline:hover { background: var(--grad-sky); border-color: transparent; color: #fff; box-shadow: 0 8px 18px rgba(56, 189, 248, 0.34); }
+    .btn-outline:hover svg { color: #fff; }
 
-    /* File Toolbar & List */
-    .file-toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-      margin-bottom: 12px;
-    }
+    .file-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 22px; margin-bottom: 12px; }
     .stats-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--sky-soft);
-      color: var(--sky-dark);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--sky-soft); color: var(--sky-dark);
       border: 1px solid rgba(56, 189, 248, 0.35);
-      padding: 6px 13px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
+      padding: 6px 13px; border-radius: 999px; font-size: 0.82rem; font-weight: 700;
     }
-    .sort-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .sort-actions { display: flex; flex-wrap: wrap; gap: 6px; }
     .chip-btn {
-      border: 1px solid rgba(56, 189, 248, 0.45);
-      background: var(--sky-pale);
-      color: var(--sky-dark);
-      padding: 6px 12px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.18s ease;
+      border: 1px solid rgba(56, 189, 248, 0.45); background: var(--sky-pale); color: var(--sky-dark);
+      padding: 6px 12px; border-radius: 10px; font-family: inherit; font-size: 0.78rem; font-weight: 700;
+      cursor: pointer; transition: all 0.18s ease;
     }
-    .chip-btn:hover {
-      border-color: var(--sky-dark);
-      color: #fff;
-      background: var(--grad-sky);
-    }
-    .chip-btn.danger {
-      background: #fff;
-      border-color: rgba(239, 68, 68, 0.3);
-      color: var(--danger);
-    }
-    .chip-btn.danger:hover {
-      border-color: var(--danger);
-      color: #fff;
-      background: var(--danger);
-    }
+    .chip-btn:hover { border-color: var(--sky-dark); color: #fff; background: var(--grad-sky); }
+    .chip-btn.danger { background: #fff; border-color: rgba(239, 68, 68, 0.3); color: var(--danger); }
+    .chip-btn.danger:hover { border-color: var(--danger); color: #fff; background: var(--danger); }
 
-    .file-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-height: 430px;
-      overflow-y: auto;
-      padding-right: 4px;
-    }
+    .file-list { display: flex; flex-direction: column; gap: 10px; max-height: 430px; overflow-y: auto; padding-right: 4px; }
     .file-list::-webkit-scrollbar { width: 6px; }
     .file-list::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.45); border-radius: 999px; }
 
     .file-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      background: #fff;
-      border: 1.5px solid rgba(56, 189, 248, 0.22);
-      border-radius: var(--radius-md);
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
-      transition: all 0.2s ease;
+      display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+      background: #fff; border: 1.5px solid rgba(56, 189, 248, 0.22);
+      border-radius: var(--radius-md); box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03); transition: all 0.2s ease;
     }
-    .file-item:hover {
-      border-color: var(--sky);
-      box-shadow: 0 6px 16px rgba(56, 189, 248, 0.14);
-    }
-    .file-item.dragging {
-      opacity: 0.45;
-      border-style: dashed;
-      border-color: var(--sky-dark);
-    }
-    .file-item.drag-target {
-      border-color: var(--sky-dark);
-      background: var(--sky-pale);
-      transform: scale(1.01);
-    }
+    .file-item:hover { border-color: var(--sky); box-shadow: 0 6px 16px rgba(56, 189, 248, 0.14); }
+    .file-item.dragging { opacity: 0.45; border-style: dashed; border-color: var(--sky-dark); }
+    .file-item.drag-target { border-color: var(--sky-dark); background: var(--sky-pale); transform: scale(1.01); }
 
-    .drag-handle {
-      cursor: grab;
-      color: var(--sky-dark);
-      display: flex;
-      align-items: center;
-      padding: 4px;
-      flex-shrink: 0;
-    }
+    .drag-handle { cursor: grab; color: var(--sky-dark); display: flex; align-items: center; padding: 4px; flex-shrink: 0; }
     .drag-handle:active { cursor: grabbing; }
 
     .order-badge {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: var(--grad-sky);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
+      width: 32px; height: 32px; border-radius: 10px; background: var(--grad-sky); color: #fff;
+      font-size: 0.78rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0;
       box-shadow: 0 4px 10px rgba(56, 189, 248, 0.28);
     }
 
-    .file-meta {
-      flex: 1;
-      min-width: 0;
-    }
-    .file-name {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--text-main);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .file-sub {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.77rem;
-      color: var(--text-light);
-      margin-top: 2px;
-    }
-    .tag-lock {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: var(--orange-soft);
-      color: #c2410c;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.72rem;
-    }
-    .tag-pages {
-      background: var(--sky-soft);
-      color: var(--sky-dark);
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.72rem;
-    }
+    .file-meta { flex: 1; min-width: 0; }
+    .file-name { font-size: 0.92rem; font-weight: 700; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .file-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.77rem; color: var(--text-light); margin-top: 2px; }
+    .tag-lock { display: inline-flex; align-items: center; gap: 4px; background: var(--orange-soft); color: #c2410c; padding: 2px 8px; border-radius: 999px; font-weight: 700; font-size: 0.72rem; }
+    .tag-pages { background: var(--sky-soft); color: var(--sky-dark); padding: 2px 8px; border-radius: 999px; font-weight: 700; font-size: 0.72rem; }
 
-    .inline-pw-box {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      max-width: 300px;
-    }
+    .inline-pw-box { margin-top: 8px; display: flex; align-items: center; gap: 6px; max-width: 300px; }
     .inline-pw-box input {
-      width: 100%;
-      padding: 6px 10px;
-      border-radius: 8px;
-      border: 1.5px solid rgba(56, 189, 248, 0.5);
-      background: var(--sky-pale);
-      font-family: inherit;
-      font-size: 0.8rem;
-      outline: none;
+      width: 100%; padding: 6px 10px; border-radius: 8px;
+      border: 1.5px solid rgba(56, 189, 248, 0.5); background: var(--sky-pale);
+      font-family: inherit; font-size: 0.8rem; outline: none;
     }
-    .inline-pw-box input:focus {
-      border-color: var(--sky-dark);
-      background: #fff;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-    }
+    .inline-pw-box input:focus { border-color: var(--sky-dark); background: #fff; box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); }
 
-    .file-controls {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      flex-shrink: 0;
-    }
+    .file-controls { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
     .icon-btn {
-      width: 32px;
-      height: 32px;
-      border-radius: 9px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      background: var(--sky-pale);
-      color: var(--sky-dark);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: all 0.18s ease;
+      width: 32px; height: 32px; border-radius: 9px; border: 1px solid rgba(56, 189, 248, 0.35);
+      background: var(--sky-pale); color: var(--sky-dark); display: grid; place-items: center;
+      cursor: pointer; transition: all 0.18s ease;
     }
-    .icon-btn:hover:not(:disabled) {
-      background: var(--grad-sky);
-      border-color: transparent;
-      color: #fff;
-    }
-    .icon-btn:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-    }
-    .icon-btn.cancel-btn {
-      background: var(--danger-soft);
-      border-color: rgba(239, 68, 68, 0.25);
-      color: var(--danger);
-    }
-    .icon-btn.cancel-btn:hover {
-      background: var(--danger);
-      color: #fff;
-      border-color: var(--danger);
-    }
+    .icon-btn:hover:not(:disabled) { background: var(--grad-sky); border-color: transparent; color: #fff; }
+    .icon-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .icon-btn.cancel-btn { background: var(--danger-soft); border-color: rgba(239, 68, 68, 0.25); color: var(--danger); }
+    .icon-btn.cancel-btn:hover { background: var(--danger); color: #fff; border-color: var(--danger); }
 
-    .reorder-hint {
-      font-size: 0.78rem;
-      color: var(--text-light);
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .reorder-hint svg {
-      color: var(--sky-dark);
-    }
+    .reorder-hint { font-size: 0.78rem; color: var(--text-light); margin-top: 8px; display: flex; align-items: center; gap: 6px; }
+    .reorder-hint svg { color: var(--sky-dark); }
 
-    /* Security / Password Settings & Entry Panel */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.35), transparent);
-      margin: 24px 0;
-    }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.35), transparent); margin: 24px 0; }
 
     .security-box {
       background: linear-gradient(135deg, rgba(224, 242, 254, 0.45), rgba(240, 249, 255, 0.75), rgba(230, 247, 246, 0.45));
       border: 1px solid rgba(56, 189, 248, 0.32);
-      border-radius: var(--radius-lg);
-      padding: 20px;
+      border-radius: var(--radius-lg); padding: 20px;
     }
+    .switch-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .switch-info h3 { font-size: 1rem; font-weight: 700; }
+    .switch-info p { font-size: 0.82rem; color: var(--text-muted); }
 
-    .switch-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-    .switch-info h3 {
-      font-size: 1rem;
-      font-weight: 700;
-    }
-    .switch-info p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    /* Toggle Pilihan (Biru Muda) */
-    .toggle {
-      position: relative;
-      width: 52px;
-      height: 28px;
-      flex-shrink: 0;
-    }
-    .toggle input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .toggle-slider {
-      position: absolute;
-      inset: 0;
-      background: #cbd5e1;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: 0.25s;
-    }
+    .toggle { position: relative; width: 52px; height: 28px; flex-shrink: 0; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider { position: absolute; inset: 0; background: #cbd5e1; border-radius: 999px; cursor: pointer; transition: 0.25s; }
     .toggle-slider::before {
-      content: "";
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      left: 3px;
-      top: 3px;
-      border-radius: 50%;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: 0.25s;
+      content: ""; position: absolute; width: 22px; height: 22px; left: 3px; top: 3px;
+      border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.2); transition: 0.25s;
     }
-    .toggle input:checked + .toggle-slider {
-      background: var(--grad-sky);
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
-    }
-    .toggle input:checked + .toggle-slider::before {
-      transform: translateX(24px);
-    }
+    .toggle input:checked + .toggle-slider { background: var(--grad-sky); box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35); }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(24px); }
 
-    .pw-fields {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .pw-fields.hidden {
-      display: none;
-    }
+    .pw-fields { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pw-fields.hidden { display: none; }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .form-group label {
-      font-size: 0.83rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.83rem; font-weight: 700; color: var(--text-main); }
 
-    .input-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
+    .input-wrap { position: relative; display: flex; align-items: center; }
     .input-control {
-      width: 100%;
-      padding: 12px 44px 12px 14px;
-      border-radius: 12px;
-      border: 1.5px solid rgba(56, 189, 248, 0.45);
-      background: #fff;
-      font-family: inherit;
-      font-size: 0.92rem;
-      color: var(--text-main);
-      outline: none;
-      transition: all 0.2s ease;
+      width: 100%; padding: 12px 44px 12px 14px; border-radius: 12px;
+      border: 1.5px solid rgba(56, 189, 248, 0.45); background: #fff;
+      font-family: inherit; font-size: 0.92rem; color: var(--text-main); outline: none; transition: all 0.2s ease;
     }
-    .input-control:focus {
-      border-color: var(--sky-dark);
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
-    }
-    .input-control.plain {
-      padding-right: 14px;
-    }
+    .input-control:focus { border-color: var(--sky-dark); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2); }
+    .input-control.plain { padding-right: 14px; }
 
     .eye-btn {
-      position: absolute;
-      right: 8px;
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
-      border: none;
-      background: transparent;
-      color: var(--sky-dark);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: all 0.18s ease;
+      position: absolute; right: 8px; width: 34px; height: 34px; border-radius: 9px;
+      border: none; background: transparent; color: var(--sky-dark);
+      display: grid; place-items: center; cursor: pointer; transition: all 0.18s ease;
     }
-    .eye-btn:hover {
-      background: var(--sky-soft);
-      color: #0369a1;
-    }
+    .eye-btn:hover { background: var(--sky-soft); color: #0369a1; }
 
-    .pw-feedback-row {
-      grid-column: 1 / -1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .strength-wrap {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-    .strength-bar {
-      width: 110px;
-      height: 7px;
-      background: #e2e8f0;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .strength-fill {
-      height: 100%;
-      width: 0%;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-    }
-    .match-status {
-      font-size: 0.81rem;
-      font-weight: 700;
-    }
+    .pw-feedback-row { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .strength-wrap { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+    .strength-bar { width: 110px; height: 7px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+    .strength-fill { height: 100%; width: 0%; border-radius: 999px; transition: all 0.25s ease; }
+    .match-status { font-size: 0.81rem; font-weight: 700; }
     .match-ok { color: #059669; }
     .match-err { color: var(--danger); }
 
-    .output-row {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-    }
+    .output-row { margin-top: 16px; display: grid; grid-template-columns: 1fr; gap: 8px; }
 
-    /* Primary Action Button */
-    .action-area {
-      margin-top: 22px;
-    }
+    .action-area { margin-top: 22px; }
     .btn-primary {
-      width: 100%;
-      border: none;
-      padding: 15px 24px;
-      border-radius: 14px;
-      background: var(--grad-btn);
-      color: #fff;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 800;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.28);
-      transition: all 0.25s ease;
+      width: 100%; border: none; padding: 15px 24px; border-radius: 14px;
+      background: var(--grad-btn); color: #fff; font-family: inherit; font-size: 1rem; font-weight: 800;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
+      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.28); transition: all 0.25s ease;
     }
-    .btn-primary.unlock-style {
-      background: var(--grad-unlock);
-    }
-    .btn-primary:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 34px rgba(13, 148, 136, 0.34);
-    }
-    .btn-primary:disabled {
-      opacity: 0.55;
-      cursor: not-allowed;
-      transform: none;
-    }
+    .btn-primary.unlock-style { background: var(--grad-unlock); }
+    .btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(13, 148, 136, 0.34); }
+    .btn-primary:disabled { opacity: 0.65; cursor: wait; transform: none; }
 
-    /* Progress & Result Alert */
-    .progress-box {
-      display: none;
-      margin-top: 16px;
-      padding: 14px;
-      border-radius: 12px;
-      background: var(--sky-pale);
-      border: 1px solid var(--border);
-    }
+    .progress-box { display: none; margin-top: 16px; padding: 14px; border-radius: 12px; background: var(--sky-pale); border: 1px solid var(--border); }
     .progress-box.show { display: block; }
-    .progress-text {
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: var(--sky-dark);
-      margin-bottom: 8px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .progress-track {
-      height: 8px;
-      background: #e2e8f0;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 100%;
-      width: 0%;
-      background: var(--grad-sky);
-      transition: width 0.25s ease;
-    }
+    .progress-text { font-size: 0.84rem; font-weight: 700; color: var(--sky-dark); margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .progress-track { height: 8px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+    .progress-bar { height: 100%; width: 0%; background: var(--grad-sky); transition: width 0.25s ease; }
 
     .alert-box {
-      display: none;
-      margin-top: 16px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      display: none; margin-top: 16px; padding: 14px 16px; border-radius: 14px;
+      font-size: 0.88rem; font-weight: 600; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
     }
     .alert-box.show { display: flex; }
-    .alert-success {
-      background: var(--green-soft);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      color: #065f46;
-    }
-    .alert-error {
-      background: var(--danger-soft);
-      border: 1px solid rgba(239, 68, 68, 0.35);
-      color: #991b1b;
-    }
-    .alert-info {
-      background: var(--sky-soft);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: #075985;
-    }
+    .alert-success { background: var(--green-soft); border: 1px solid rgba(16, 185, 129, 0.35); color: #065f46; }
+    .alert-error { background: var(--danger-soft); border: 1px solid rgba(239, 68, 68, 0.35); color: #991b1b; }
+    .alert-info { background: var(--sky-soft); border: 1px solid rgba(56, 189, 248, 0.35); color: #075985; }
 
     .btn-download-again {
-      padding: 8px 14px;
-      border-radius: 10px;
-      background: var(--grad-sky);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      padding: 9px 16px; border-radius: 10px; background: var(--grad-sky); color: #fff;
+      text-decoration: none; font-size: 0.84rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
     }
-    .btn-download-again:hover {
-      opacity: 0.92;
-    }
+    .btn-download-again:hover { opacity: 0.92; }
 
-    /* Single File Card (Unlock Tab) */
-    .selected-single {
-      display: none;
-      margin-top: 16px;
-    }
-    .selected-single.show {
-      display: block;
-    }
+    .selected-single { display: none; margin-top: 16px; }
+    .selected-single.show { display: block; }
 
-    .unlock-status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-top: 10px;
-    }
+    .unlock-status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; margin-top: 10px; }
     .status-locked { background: var(--orange-soft); color: #c2410c; }
     .status-owner { background: #fef9c3; color: #854d0e; }
     .status-open { background: var(--green-soft); color: #047857; }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.82rem;
-      color: var(--text-light);
-    }
-    footer strong {
-      background: var(--grad-main);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    footer { text-align: center; margin-top: 30px; font-size: 0.82rem; color: var(--text-light); }
+    footer strong { background: var(--grad-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
     @media (max-width: 680px) {
       .card { padding: 20px 16px; }
@@ -936,7 +369,6 @@
 </head>
 <body>
 
-  <!-- Latar belakang gradasi dinamis -->
   <div class="bg-decor">
     <div class="blob blob-orange"></div>
     <div class="blob blob-green"></div>
@@ -944,7 +376,6 @@
   </div>
 
   <div class="container">
-    <!-- Hero / Home Page Branding -->
     <header class="hero">
       <div class="brand-pill">
         <span class="brand-dot"></span>
@@ -983,7 +414,6 @@
       </div>
     </header>
 
-    <!-- Navigasi Tab Pilihan Fitur (Biru Muda) -->
     <div class="tabs-wrapper">
       <div class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="merge" role="tab" aria-selected="true">
@@ -1001,7 +431,6 @@
       </div>
     </div>
 
-    <!-- Main Workspace Card -->
     <main class="card">
 
       <!-- ==================== TAB 1: GABUNG & KUNCI PDF ==================== -->
@@ -1013,9 +442,8 @@
           </div>
         </div>
 
-        <!-- Area Upload / Entry & Ikon Tambah Biru Muda -->
         <div class="dropzone" id="mergeDropzone">
-          <input type="file" id="mergeFileInput" accept=".pdf,.PDF,application/pdf,application/x-pdf" multiple />
+          <input type="file" id="mergeFileInput" accept=".pdf,.PDF,application/pdf" multiple />
           <div class="drop-icon">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -1032,15 +460,14 @@
           </button>
         </div>
 
-        <!-- Daftar File & Kontrol Urutan -->
         <div id="mergeListSection" style="display:none;">
           <div class="file-toolbar">
             <div class="stats-pill" id="mergeStats">0 File • 0 Halaman</div>
             <div class="sort-actions">
-              <button type="button" class="chip-btn" id="sortAZBtn" title="Urutkan nama A ke Z">Urut A–Z</button>
-              <button type="button" class="chip-btn" id="sortZABtn" title="Urutkan nama Z ke A">Urut Z–A</button>
-              <button type="button" class="chip-btn" id="reverseBtn" title="Balik urutan daftar">Balik Urutan</button>
-              <button type="button" class="chip-btn danger" id="clearAllBtn" title="Hapus semua file">Batalkan Semua</button>
+              <button type="button" class="chip-btn" id="sortAZBtn">Urut A–Z</button>
+              <button type="button" class="chip-btn" id="sortZABtn">Urut Z–A</button>
+              <button type="button" class="chip-btn" id="reverseBtn">Balik Urutan</button>
+              <button type="button" class="chip-btn danger" id="clearAllBtn">Batalkan Semua</button>
             </div>
           </div>
 
@@ -1054,12 +481,11 @@
 
         <div class="divider"></div>
 
-        <!-- Pengaturan Password -->
-        <div class="security-box">
+        <div class="security-box" id="passwordSecurityBox">
           <div class="switch-row">
             <div class="switch-info">
               <h3>Beri Password pada PDF Hasil Gabungan</h3>
-              <p>Aktifkan untuk mengunci file gabungan agar hanya bisa dibuka dengan password.</p>
+              <p>Aktifkan untuk mengunci file gabungan, atau matikan jika ingin menggabungkan PDF tanpa password.</p>
             </div>
             <label class="toggle" title="Aktifkan/Matikan Password">
               <input type="checkbox" id="enablePasswordToggle" checked />
@@ -1068,7 +494,6 @@
           </div>
 
           <div class="pw-fields" id="passwordFieldsWrap">
-            <!-- Password Utama -->
             <div class="form-group">
               <label for="mergePassword">Password Baru</label>
               <div class="input-wrap">
@@ -1077,7 +502,6 @@
               </div>
             </div>
 
-            <!-- Ulangi Password 2x -->
             <div class="form-group">
               <label for="mergePasswordConfirm">Ulangi Password (2x)</label>
               <div class="input-wrap">
@@ -1086,7 +510,6 @@
               </div>
             </div>
 
-            <!-- Indikator Kekuatan & Kecocokan -->
             <div class="pw-feedback-row">
               <div class="strength-wrap">
                 <span>Kekuatan:</span>
@@ -1097,7 +520,6 @@
             </div>
           </div>
 
-          <!-- Nama File Output -->
           <div class="output-row">
             <div class="form-group">
               <label for="outputFilename">Nama File Hasil (Opsional)</label>
@@ -1106,9 +528,8 @@
           </div>
         </div>
 
-        <!-- Tombol Proses -->
         <div class="action-area">
-          <button type="button" class="btn-primary" id="mergeProcessBtn" disabled>
+          <button type="button" class="btn-primary" id="mergeProcessBtn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
@@ -1139,7 +560,7 @@
         </div>
 
         <div class="dropzone" id="unlockDropzone">
-          <input type="file" id="unlockFileInput" accept=".pdf,.PDF,application/pdf,application/x-pdf" />
+          <input type="file" id="unlockFileInput" accept=".pdf,.PDF,application/pdf" />
           <div class="drop-icon">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
@@ -1154,7 +575,6 @@
           </button>
         </div>
 
-        <!-- File terpilih + Cancel Button -->
         <div class="selected-single" id="unlockSelectedCard">
           <div class="file-item">
             <div class="order-badge">PDF</div>
@@ -1205,44 +625,90 @@
 
   <script>
     // =========================================================================
-    // 1. INISIALISASI PUSTAKA PDF (@cantoo/pdf-lib) DENGAN FALLBACK OTOMATIS
+    // 1. INISIALISASI PUSTAKA PDF (@cantoo/pdf-lib) DENGAN FALLBACK BERLAPIS
     // =========================================================================
     let cachedPDFLib = null;
+
+    function loadScriptFallback(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.async = true;
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error('Gagal memuat ' + src));
+        document.head.appendChild(s);
+      });
+    }
+
     async function getPDFLib() {
       if (cachedPDFLib) return cachedPDFLib;
       if (window.PDFLib && typeof window.PDFLib.PDFDocument?.create === 'function') {
         cachedPDFLib = window.PDFLib;
         return cachedPDFLib;
       }
-      const cdnFallbacks = [
+
+      // Coba UMD fallback jika jsdelivr utama terblokir/lambat
+      const umdFallbacks = [
+        'https://unpkg.com/@cantoo/pdf-lib@2.11.1/dist/pdf-lib.min.js',
+        'https://cdn.jsdelivr.net/npm/@cantoo/pdf-lib/dist/pdf-lib.min.js'
+      ];
+      for (const url of umdFallbacks) {
+        try {
+          await loadScriptFallback(url);
+          if (window.PDFLib && typeof window.PDFLib.PDFDocument?.create === 'function') {
+            cachedPDFLib = window.PDFLib;
+            return cachedPDFLib;
+          }
+        } catch (err) {
+          console.warn('UMD fallback gagal:', url);
+        }
+      }
+
+      // Coba ESM fallback
+      const esmFallbacks = [
         'https://cdn.jsdelivr.net/npm/@cantoo/pdf-lib@2.11.1/dist/pdf-lib.esm.min.js',
         'https://unpkg.com/@cantoo/pdf-lib@2.11.1/dist/pdf-lib.esm.min.js',
         'https://esm.sh/@cantoo/pdf-lib@2.11.1'
       ];
-      for (const url of cdnFallbacks) {
+      for (const url of esmFallbacks) {
         try {
           const mod = await import(url);
-          if (mod && mod.PDFDocument) {
-            cachedPDFLib = mod;
+          const lib = mod?.PDFDocument ? mod : mod?.default;
+          if (lib && typeof lib.PDFDocument?.create === 'function') {
+            cachedPDFLib = lib;
             return cachedPDFLib;
           }
         } catch (err) {
-          console.warn('Fallback CDN gagal:', url, err);
+          console.warn('ESM fallback gagal:', url);
         }
       }
-      throw new Error('Pustaka PDF gagal dimuat. Periksa koneksi internet Anda lalu muat ulang halaman.');
+
+      throw new Error('Pustaka PDF gagal dimuat dari internet. Periksa koneksi Anda lalu muat ulang (refresh) halaman.');
     }
 
     // =========================================================================
-    // 2. VALIDASI FORMAT FILE (.PDF dan .pdf) & UTILITAS UMUM
+    // 2. DETEKSI FILE PDF AKURAT (.pdf / .PDF / HEADER MAGIC BYTES %PDF-)
     // =========================================================================
-    function isPdfFile(file) {
+    async function verifyIsPdfFile(file) {
       if (!file) return false;
       const name = (file.name || '').trim().toLowerCase();
       const type = (file.type || '').trim().toLowerCase();
-      return name.endsWith('.pdf') || type === 'application/pdf' || type === 'application/x-pdf';
+      if (name.endsWith('.pdf') || type === 'application/pdf' || type === 'application/x-pdf') {
+        return true;
+      }
+      // Jika dari HP/Drive tanpa ekstensi, cek header asli "%PDF-" pada 1024 byte pertama
+      try {
+        const slice = await file.slice(0, 1024).arrayBuffer();
+        const text = new TextDecoder('latin1').decode(slice);
+        return text.includes('%PDF-');
+      } catch (e) {
+        return false;
+      }
     }
 
+    // =========================================================================
+    // 3. UTILITAS UI & IKON MATA (LIHAT / TUTUP PASSWORD)
+    // =========================================================================
     const EYE_OPEN_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
     const EYE_CLOSED_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
 
@@ -1292,7 +758,7 @@
       if (downloadUrl && downloadName) {
         html += `<a class="btn-download-again" href="${downloadUrl}" download="${escapeHtml(downloadName)}">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Unduh Lagi
+          Unduh File PDF
         </a>`;
       }
       el.innerHTML = html;
@@ -1304,7 +770,7 @@
     }
 
     // =========================================================================
-    // 3. NAVIGASI TAB
+    // 4. NAVIGASI TAB
     // =========================================================================
     document.querySelectorAll('.tab-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -1320,7 +786,7 @@
     });
 
     // =========================================================================
-    // 4. LOGIKA TAB 1: GABUNG & KUNCI PDF (UNLIMITED + URUTKAN + CANCEL)
+    // 5. LOGIKA TAB 1: GABUNG & KUNCI PDF
     // =========================================================================
     const mergeFiles = []; // { id, file, name, size, pageCount, locked, password }
     let fileIdCounter = 1;
@@ -1377,54 +843,72 @@
 
     async function addFilesToMergeQueue(fileList) {
       hideAlert(mergeAlert);
-      let PDFLib;
+      const rawFiles = Array.from(fileList);
+      const validFiles = [];
+
+      for (const f of rawFiles) {
+        if (await verifyIsPdfFile(f)) {
+          validFiles.push(f);
+        }
+      }
+
+      if (!validFiles.length) {
+        showAlert(mergeAlert, 'error', 'File yang dipilih bukan berformat PDF (.pdf / .PDF).');
+        return;
+      }
+
+      let PDFLib = null;
       try {
         PDFLib = await getPDFLib();
       } catch (err) {
         showAlert(mergeAlert, 'error', err.message);
-        return;
       }
 
-      const incoming = Array.from(fileList).filter(isPdfFile);
-
-      if (!incoming.length) {
-        showAlert(mergeAlert, 'error', 'Harap pilih file berformat PDF (.pdf atau .PDF).');
-        return;
-      }
-
-      for (const file of incoming) {
+      for (const file of validFiles) {
         const entry = {
           id: fileIdCounter++,
           file,
-          name: file.name,
+          name: file.name || 'Dokumen.pdf',
           size: file.size,
           pageCount: null,
           locked: false,
           password: ''
         };
 
-        try {
-          const bytes = new Uint8Array(await file.arrayBuffer());
+        if (PDFLib) {
           try {
-            const doc = await PDFLib.PDFDocument.load(bytes);
-            entry.pageCount = doc.getPageCount();
-          } catch (err1) {
+            const bytes = new Uint8Array(await file.arrayBuffer());
             try {
-              const docOwner = await PDFLib.PDFDocument.load(bytes, { password: '' });
-              entry.pageCount = docOwner.getPageCount();
-            } catch (err2) {
-              entry.locked = true;
+              const doc = await PDFLib.PDFDocument.load(bytes, { throwOnInvalidObject: false });
+              entry.pageCount = doc.getPageCount();
+            } catch (err1) {
+              try {
+                // Coba buka PDF yang hanya dikunci izin (password buka kosong)
+                const docOwner = await PDFLib.PDFDocument.load(bytes, { password: '', throwOnInvalidObject: false });
+                entry.pageCount = docOwner.getPageCount();
+              } catch (err2) {
+                // Pastikan apakah benar-benar terenkripsi
+                try {
+                  const docInspect = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true, throwOnInvalidObject: false });
+                  entry.pageCount = docInspect.getPageCount();
+                  if (docInspect.isEncrypted) {
+                    entry.locked = true;
+                  }
+                } catch (err3) {
+                  console.warn('Info pratinjau PDF:', file.name, err3);
+                }
+              }
             }
+          } catch (readErr) {
+            console.warn('Gagal membaca buffer:', file.name, readErr);
           }
-        } catch (readErr) {
-          console.warn('Gagal membaca pratinjau file:', file.name, readErr);
         }
 
         mergeFiles.push(entry);
       }
 
       renderMergeList();
-      updateMergeActionState();
+      updateMergeButtonLabel();
     }
 
     function renderMergeList() {
@@ -1436,8 +920,8 @@
       mergeListSection.style.display = 'block';
 
       const totalPages = mergeFiles.reduce((acc, f) => acc + (f.pageCount || 0), 0);
-      const hasLockedUnknown = mergeFiles.some((f) => f.locked && f.pageCount === null);
-      mergeStatsEl.textContent = `${mergeFiles.length} File PDF • ${totalPages}${hasLockedUnknown ? '+' : ''} Halaman`;
+      const hasUnknownPages = mergeFiles.some((f) => f.pageCount === null);
+      mergeStatsEl.textContent = `${mergeFiles.length} File PDF • ${totalPages}${hasUnknownPages ? '+' : ''} Halaman`;
 
       mergeFileListEl.innerHTML = '';
 
@@ -1449,9 +933,11 @@
 
         const pageBadge = item.pageCount !== null
           ? `<span class="tag-pages">${item.pageCount} halaman</span>`
-          : (item.locked
-              ? `<span class="tag-lock">Terkunci Password</span>`
-              : `<span>PDF</span>`);
+          : `<span>Siap digabung</span>`;
+
+        const lockBadge = item.locked
+          ? `<span class="tag-lock">Terkunci Password</span>`
+          : '';
 
         const inlinePwHtml = item.locked
           ? `<div class="inline-pw-box">
@@ -1473,6 +959,7 @@
             <div class="file-sub">
               <span>${formatBytes(item.size)}</span>
               ${pageBadge}
+              ${lockBadge}
             </div>
             ${inlinePwHtml}
           </div>
@@ -1506,7 +993,6 @@
         row.querySelector('.remove-file').addEventListener('click', () => {
           mergeFiles.splice(index, 1);
           renderMergeList();
-          updateMergeActionState();
         });
 
         const inlineInput = row.querySelector('.inline-file-pw');
@@ -1571,7 +1057,6 @@
       mergeFiles.length = 0;
       hideAlert(mergeAlert);
       renderMergeList();
-      updateMergeActionState();
     });
 
     function evaluatePasswordUI() {
@@ -1611,16 +1096,11 @@
         matchStatus.className = 'match-status match-err';
       }
 
-      updateMergeActionState();
+      updateMergeButtonLabel();
     }
 
-    function updateMergeActionState() {
+    function updateMergeButtonLabel() {
       const usePw = enablePasswordToggle.checked;
-      const pw1 = mergePassword.value;
-      const pw2 = mergePasswordConfirm.value;
-      const pwValid = !usePw || (pw1.length > 0 && pw1 === pw2);
-
-      mergeProcessBtn.disabled = mergeFiles.length === 0 || !pwValid;
       mergeProcessBtn.innerHTML = usePw
         ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Gabungkan &amp; Kunci PDF Sekarang`
         : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Gabungkan PDF Tanpa Password`;
@@ -1632,7 +1112,12 @@
     evaluatePasswordUI();
 
     mergeProcessBtn.addEventListener('click', async () => {
-      if (mergeFiles.length === 0) return;
+      hideAlert(mergeAlert);
+
+      if (mergeFiles.length === 0) {
+        showAlert(mergeAlert, 'error', 'Belum ada file PDF yang dipilih. Klik kotak biru muda di atas untuk menambahkan file PDF terlebih dahulu.');
+        return;
+      }
 
       const usePw = enablePasswordToggle.checked;
       const pw1 = mergePassword.value;
@@ -1640,16 +1125,17 @@
 
       if (usePw) {
         if (!pw1) {
-          showAlert(mergeAlert, 'error', 'Silakan isi password terlebih dahulu.');
+          showAlert(mergeAlert, 'error', 'Sakelar "Beri Password" masih aktif. Silakan isi Password Baru dan Ulangi Password (2x), atau matikan sakelar jika ingin menggabung tanpa password.');
+          mergePassword.focus();
           return;
         }
         if (pw1 !== pw2) {
-          showAlert(mergeAlert, 'error', 'Password dan Ulangi Password tidak sama.');
+          showAlert(mergeAlert, 'error', 'Password Baru dan Ulangi Password (2x) belum sama. Mohon periksa kembali.');
+          mergePasswordConfirm.focus();
           return;
         }
       }
 
-      hideAlert(mergeAlert);
       mergeProcessBtn.disabled = true;
       mergeProgressBox.classList.add('show');
       updateProgress(5, 'Menyiapkan mesin PDF...');
@@ -1660,7 +1146,7 @@
 
         for (let i = 0; i < mergeFiles.length; i++) {
           const item = mergeFiles[i];
-          const pct = Math.round(10 + ((i + 1) / mergeFiles.length) * 70);
+          const pct = Math.round(10 + ((i + 1) / mergeFiles.length) * 72);
           updateProgress(pct, `Menggabungkan file ${i + 1} dari ${mergeFiles.length}: ${item.name}`);
 
           const bytes = new Uint8Array(await item.file.arrayBuffer());
@@ -1669,38 +1155,46 @@
           try {
             if (item.locked) {
               if (!item.password) {
-                throw new Error(`File "${item.name}" terkunci password. Masukkan passwordnya di kolom file atau buka dulu di tab "Batalkan Password PDF".`);
+                throw new Error(`File "${item.name}" terkunci password. Masukkan passwordnya di kolom file tersebut terlebih dahulu.`);
               }
-              srcDoc = await PDFLib.PDFDocument.load(bytes, { password: item.password });
+              srcDoc = await PDFLib.PDFDocument.load(bytes, { password: item.password, throwOnInvalidObject: false });
             } else {
               try {
-                srcDoc = await PDFLib.PDFDocument.load(bytes);
-              } catch (e) {
-                srcDoc = await PDFLib.PDFDocument.load(bytes, { password: '' });
+                srcDoc = await PDFLib.PDFDocument.load(bytes, { throwOnInvalidObject: false });
+              } catch (e1) {
+                srcDoc = await PDFLib.PDFDocument.load(bytes, { password: '', throwOnInvalidObject: false });
               }
             }
           } catch (loadErr) {
             if (item.locked) {
-              throw new Error(`Gagal membuka "${item.name}". Pastikan password file tersebut benar.`);
+              throw new Error(`Password untuk "${item.name}" salah atau enkripsi tidak didukung.`);
             }
-            throw new Error(`Gagal membaca "${item.name}": ${loadErr.message}`);
+            throw new Error(`File "${item.name}" gagal dibaca (${loadErr.message}). Pastikan file tidak rusak.`);
           }
 
-          const copiedPages = await mergedPdf.copyPages(srcDoc, srcDoc.getPageIndices());
+          const indices = srcDoc.getPageIndices();
+          if (indices.length === 0) {
+            throw new Error(`File "${item.name}" tidak memiliki halaman.`);
+          }
+          const copiedPages = await mergedPdf.copyPages(srcDoc, indices);
           copiedPages.forEach((page) => mergedPdf.addPage(page));
         }
 
         if (usePw) {
-          updateProgress(88, 'Mengenkripsi PDF dengan AES-256...');
+          updateProgress(88, 'Mengunci PDF dengan enkripsi AES-256...');
           mergedPdf.encrypt({
             userPassword: pw1,
-            ownerPassword: pw1,
-            algorithm: 'AES-256'
+            ownerPassword: pw1
           });
         }
 
-        updateProgress(96, 'Menyimpan file PDF akhir...');
-        const savedBytes = await mergedPdf.save({ useObjectStreams: false });
+        updateProgress(95, 'Menyimpan file PDF gabungan...');
+        let savedBytes;
+        try {
+          savedBytes = await mergedPdf.save();
+        } catch (saveErr) {
+          savedBytes = await mergedPdf.save({ useObjectStreams: false });
+        }
 
         let rawName = (outputFilename.value || 'KODE-RAPI-Gabungan').trim();
         rawName = rawName.replace(/[\\/:*?"<>|]/g, '-');
@@ -1712,14 +1206,14 @@
         updateProgress(100, 'Selesai!');
         const statusMsg = usePw
           ? `Berhasil menggabungkan ${mergeFiles.length} PDF dan menguncinya dengan password!`
-          : `Berhasil menggabungkan ${mergeFiles.length} PDF!`;
+          : `Berhasil menggabungkan ${mergeFiles.length} PDF tanpa password!`;
         showAlert(mergeAlert, 'success', statusMsg, lastMergeUrl, rawName);
       } catch (err) {
-        console.error(err);
+        console.error('Detail error penggabungan PDF:', err);
         showAlert(mergeAlert, 'error', err.message || 'Terjadi kesalahan saat memproses PDF.');
       } finally {
         setTimeout(() => mergeProgressBox.classList.remove('show'), 900);
-        updateMergeActionState();
+        mergeProcessBtn.disabled = false;
       }
     });
 
@@ -1730,7 +1224,7 @@
     }
 
     // =========================================================================
-    // 5. LOGIKA TAB 2: BATALKAN / HAPUS PASSWORD PADA PDF TERKUNCI
+    // 6. LOGIKA TAB 2: BATALKAN / HAPUS PASSWORD PADA PDF TERKUNCI
     // =========================================================================
     let unlockFileObj = null;
     let unlockMode = 'unknown';
@@ -1783,7 +1277,7 @@
 
     async function handleUnlockFileSelect(file) {
       hideAlert(unlockAlert);
-      if (!isPdfFile(file)) {
+      if (!(await verifyIsPdfFile(file))) {
         showAlert(unlockAlert, 'error', 'Harap pilih file berformat PDF (.pdf atau .PDF).');
         return;
       }
@@ -1805,13 +1299,13 @@
       try {
         const bytes = new Uint8Array(await file.arrayBuffer());
         try {
-          const doc = await PDFLib.PDFDocument.load(bytes);
+          const doc = await PDFLib.PDFDocument.load(bytes, { throwOnInvalidObject: false });
           unlockMode = 'not-encrypted';
           unlockFileMeta.textContent = `${formatBytes(file.size)} • ${doc.getPageCount()} halaman`;
           unlockStatusBadge.innerHTML = `<span class="unlock-status-badge status-open">✓ PDF ini tidak memiliki password buka</span>`;
         } catch (err1) {
           try {
-            const docOwner = await PDFLib.PDFDocument.load(bytes, { password: '' });
+            const docOwner = await PDFLib.PDFDocument.load(bytes, { password: '', throwOnInvalidObject: false });
             unlockMode = 'owner-only';
             unlockFileMeta.textContent = `${formatBytes(file.size)} • ${docOwner.getPageCount()} halaman`;
             unlockStatusBadge.innerHTML = `<span class="unlock-status-badge status-owner">Terkunci Pembatasan Izin (Bisa langsung dibuka tanpa password)</span>`;
@@ -1846,7 +1340,7 @@
 
         let doc;
         try {
-          doc = await PDFLib.PDFDocument.load(bytes, { password: pw });
+          doc = await PDFLib.PDFDocument.load(bytes, { password: pw, throwOnInvalidObject: false });
         } catch (loadErr) {
           throw new Error('Password salah atau format enkripsi tidak didukung. Pastikan huruf besar/kecil password sudah tepat.');
         }
@@ -1855,7 +1349,7 @@
           delete doc.context.trailerInfo.Encrypt;
         }
 
-        const unlockedBytes = await doc.save({ useObjectStreams: false });
+        const unlockedBytes = await doc.save();
         const baseName = unlockFileObj.name.replace(/\.pdf$/i, '');
         const outName = `${baseName}-tanpa-password.pdf`;
 
